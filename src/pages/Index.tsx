@@ -283,6 +283,7 @@ const Index = () => {
                     onClick={() => {
                       setActiveAirline(null);
                       setActiveStop(0);
+                      setActiveSort(null);
                       setFilterResults(searchResults.filter(flight => flight.stops === 0));
                     }}
                   >
@@ -295,6 +296,7 @@ const Index = () => {
                     onClick={() => {
                       setActiveAirline(null);
                       setActiveStop(1);
+                      setActiveSort(null);
                       setFilterResults(searchResults.filter(flight => flight.stops === 1));
                     }}
                   >
@@ -313,6 +315,7 @@ const Index = () => {
                     onClick={() => {
                       setActiveStop(null);
                       setActiveAirline('6E');
+                      setActiveSort(null);
                       setFilterResults(searchResults.filter(flight => flight.airline === '6E'));
                     }}
                   >
@@ -325,6 +328,7 @@ const Index = () => {
                     onClick={() => {
                       setActiveStop(null);
                       setActiveAirline('AI');
+                      setActiveSort(null);
                       setFilterResults(searchResults.filter(flight => flight.airline === 'AI'));
                     }}
                   >
@@ -337,6 +341,7 @@ const Index = () => {
                     onClick={() => {
                       setActiveStop(null);
                       setActiveAirline('SG');
+                      setActiveSort(null);
                       setFilterResults(searchResults.filter(flight => flight.airline === 'SG'));
                     }}
                   >
