@@ -28,7 +28,7 @@ const FlightCard = ({ flight, showBookButton = true }: FlightCardProps) => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`http://localhost:5000/api/book/${flight.id}`);
+      const response = await axios.post(`${import.meta.env.VITE_PUBLIC_BASEURL}/api/book/${flight.id}`);
       console.log("Booking response:", response);
     } catch (error) {
       console.error('Error booking flight:', error);

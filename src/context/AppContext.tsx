@@ -55,7 +55,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/user');
+        const res = await axios.get(`${import.meta.env.VITE_PUBLIC_BASEURL}/api/user`);
         console.log('User data------------------------>', res.data); // Log the user data
         
         setUser(res.data);
@@ -84,7 +84,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     }
   
     try {
-      const response = await axios.post("http://localhost:5000/api/book", {
+      const response = await axios.post(`${import.meta.env.VITE_PUBLIC_BASEURL}/api/book`, {
         flight: flight
       });
   

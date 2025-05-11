@@ -24,7 +24,7 @@ const BookingsPage = () => {
 
   const fetchUserBookings = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/user');
+      const response = await axios.get(`${import.meta.env.VITE_PUBLIC_BASEURL}/api/user`);
       console.log("---------------->",response);
       setBookings(response.data.bookings || []); 
     } catch (error) {

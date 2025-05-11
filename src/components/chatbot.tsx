@@ -28,7 +28,7 @@ const Chatbot = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/chatbot/ask', { message: input });
+      const res = await axios.post(`${import.meta.env.VITE_PUBLIC_BASEURL}/api/chatbot/ask`, { message: input });
       const botMsg = { sender: 'bot', text: res.data.reply };
       setMessages(prev => [...prev, botMsg]);
     } catch (err) {

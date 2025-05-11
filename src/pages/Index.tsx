@@ -89,7 +89,7 @@ const Index = () => {
       setArrivalCityCode(arrivalCityCodeInput);
       setLoading(true);
 
-      const response = await axios.post('http://localhost:5000/api/flights/save-flights', {
+      const response = await axios.post(`${import.meta.env.VITE_PUBLIC_BASEURL}/api/flights/save-flights`, {
         departureCity: departureCityInput,
         arrivalCity: arrivalCityInput,
         departureCityCode: departureCityCodeInput,
