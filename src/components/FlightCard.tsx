@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import { useAppContext } from '@/context/AppContext';
 import { Clock, Ticket } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
 import { airlineLogos } from '../../public/logos/airlineLogos.ts'
 import { airlineNames } from '@/data/mockData.ts';
 import axios from 'axios';

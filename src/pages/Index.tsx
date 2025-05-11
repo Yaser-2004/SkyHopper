@@ -59,25 +59,25 @@ const Index = () => {
       route: "India - Delhi",
       city: "Delhi",
       travelClass: "Economy Class - One-way",
-      image: "../../public/places/delhi.jpg",
+      image: "../../places/delhi.jpg",
     },
     {
       route: "Inida - Mumbai",
       city: "Mumbai",
       travelClass: "Business Class - One-way",
-      image: "../../public/places/mumbai.jpg",
+      image: "../../places/mumbai.jpg",
     },
     {
       route: "India - Kolkata",
       city: "Kolkata",
       travelClass: "Economy Class - One-way",
-      image: "../../public/places/kolkata.jpg",
+      image: "../../places/kolkata.jpg",
     },
     {
       route: "Inida - Hyderabad",
       city: "Hyderabad",
       travelClass: "Business Class - One-way",
-      image: "../../public/places/hyderabad.jpg",
+      image: "../../places/hyderabad.jpg",
     },
   ]
 
@@ -127,7 +127,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Search Form */}
-      <div className="pb-16 bg-[url('/public/sky1.jpg')] bg-cover bg-left bg-no-repeat">
+      <div className="pb-16 bg-[url('/sky1.jpg')] bg-cover bg-left bg-no-repeat">
         <Navbar />
 
         <div className="max-w-6xl mx-auto bg-white shadow-lg p-6 rounded-xl my-20 max-sm:mx-2">
@@ -421,7 +421,7 @@ const Index = () => {
                 <div className="mt-auto">
                   <p className="font-medium text-center mb-2">Abraham Khan</p>
                   <div className="w-14 h-14 rounded-full overflow-hidden mx-auto">
-                    <img src="../../public/woman.jpg" alt="Abraham Khan" className="w-full h-full object-cover" />
+                    <img src="../../woman.jpg" alt="Abraham Khan" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -474,7 +474,7 @@ const Index = () => {
                 <div className="mt-auto">
                   <p className="font-medium text-center mb-2">Mike Handson</p>
                   <div className="w-14 h-14 rounded-full overflow-hidden mx-auto">
-                    <img src="../../public/woman.jpg" alt="Mike Handson" className="w-full h-full object-cover" />
+                    <img src="../../woman.jpg" alt="Mike Handson" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -527,7 +527,7 @@ const Index = () => {
                 <div className="mt-auto">
                   <p className="font-medium text-center mb-2">Mary Chilsen</p>
                   <div className="w-14 h-14 rounded-full overflow-hidden mx-auto">
-                    <img src="../../public/woman.jpg" alt="Mary Chilsen" className="w-full h-full object-cover" />
+                    <img src="../../woman.jpg" alt="Mary Chilsen" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
