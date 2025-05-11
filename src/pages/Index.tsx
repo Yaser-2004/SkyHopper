@@ -46,6 +46,7 @@ const Index = () => {
   const [filterResults, setFilterResults] = useState([...searchResults]);
   const [activeStop, setActiveStop] = useState(null); 
   const [activeAirline, setActiveAirline] = useState(null);
+  const [activeSort, setActiveSort] = useState(null);
 
   useEffect(() => {
     // When user comes back to this page
@@ -340,6 +341,40 @@ const Index = () => {
                     }}
                   >
                     SpiceJet
+                  </Button>
+                </div>
+              </div>
+
+              <div className="flex items-center">
+                <span className="font-medium mr-2">Prices:</span>
+                <div className="flex space-x-2 max-sm:space-x-1">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className={`${activeSort === 'LH' ? 'bg-skyhopper-secondary text-white' : ''}`}
+                    onClick={() => {
+                      setActiveStop(null);
+                      setActiveAirline(null);
+                      setActiveSort('LH');
+                      const sorted = [...searchResults].sort((a,b) => a.currentPrice - b.currentPrice);
+                      setFilterResults(sorted);
+                    }}
+                  >
+                    Low to High
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className={`${activeSort === 'HL' ? 'bg-skyhopper-secondary text-white' : ''}`}
+                    onClick={() => {
+                      setActiveStop(null);
+                      setActiveAirline(null);
+                      setActiveSort('HL');
+                      const sorted = [...searchResults].sort((a,b) => b.currentPrice - a.currentPrice);
+                      setFilterResults(sorted);
+                    }}
+                  >
+                    Hight to Low
                   </Button>
                 </div>
               </div>
