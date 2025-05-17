@@ -3,8 +3,8 @@ import axios from "axios";
 export async function getAmadeusToken() {
   const params = new URLSearchParams();
   params.append("grant_type", "client_credentials");
-  params.append("client_id", "UdZ5hCIn9yCIxMogEQhkevOdj9IwqKT6");       // ⚠️ Replace with your real key
-  params.append("client_secret", "5iIhdkL0AHaGxXgk"); // ⚠️ Replace with your real secret
+  params.append("client_id", import.meta.env.VITE_API_KEY);       
+  params.append("client_secret", import.meta.env.VITE_CLIENT_SECRET); 
 
   try {
     const response = await axios.post(
@@ -17,7 +17,6 @@ export async function getAmadeusToken() {
       }
     );
 
-    console.log("Amadeus token response:", response.data.access_token); // Log the response data
     return response.data.access_token;
   } catch (error) {
     console.error("Error fetching Amadeus token:", error);
