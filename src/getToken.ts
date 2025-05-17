@@ -3,8 +3,8 @@ import axios from "axios";
 export async function getAmadeusToken() {
   const params = new URLSearchParams();
   params.append("grant_type", "client_credentials");
-  params.append("client_id", import.meta.env.VITE_API_KEY);       
-  params.append("client_secret", import.meta.env.VITE_CLIENT_SECRET); 
+  params.append("client_id", import.meta.env.VITE_API);       
+  params.append("client_secret", import.meta.env.VITE_CLIENT_SEC); 
 
   try {
     const response = await axios.post(
